@@ -8,7 +8,7 @@ import {
   Inter_700Bold,
   Inter_500Medium
 } from '@expo-google-fonts/inter';
-import typography from './app/typography';
+import typography from './typography';
 import backgroundImage from "./assets/image-23.png"
 import cookImage from "./assets/image-22.png"
 import { Button } from 'react-native-paper';
@@ -33,7 +33,7 @@ export default function App() {
           <SafeAreaView>
             
         
-          <View className="pt-[50] ">
+          <View className="">
           <Image className="mx-auto h-[427]" source={cookImage} />
         </View>
         <View className=" relative">
