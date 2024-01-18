@@ -9,7 +9,7 @@ module.exports = {
       Inter600:"Inter_600SemiBold",
     },
     colors: {
-      light:"#F5F5F5",
+      light:"#FFFFFF",
       "light-bg": "#F5F5F5",
       bgGreen: "#DAECDF",
       primary:"#9AD983",

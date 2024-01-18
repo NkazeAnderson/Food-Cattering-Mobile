@@ -13,6 +13,8 @@ import backgroundImage from "./assets/image-23.png"
 import cookImage from "./assets/image-22.png"
 import { Button } from 'react-native-paper';
 import { PaperProvider } from 'react-native-paper';
+import ButtonComponent from './components/ButtonComponent';
+import { Link, router } from 'expo-router';
 
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
@@ -26,9 +28,12 @@ export default function App() {
     return null;
   }
 
+    const start = () => {
+        router.push("/Login")
+    }
   return (
-    <View className="bg-light">
-      <PaperProvider>
+      <View className="bg-light">
+          
       <ImageBackground className="flex w-screen h-screen bg-bgGreen" resizeMode='cover' source={backgroundImage}>
           <SafeAreaView>
             
@@ -57,15 +62,16 @@ export default function App() {
             </Text>
               <View className="h-2 w-6 mx-auto bg-primary rounded-3xl">
             </View>
-              <Button className="bg-primary rounded-xl mb-4" mode='contained' style={typography.labelLarge}>
-                <Text className="text-light" style={typography.labelLarge}>Get Started</Text>
-              </Button>
+                 <View >          
+                    <ButtonComponent textString={"Get Started"} onpress={start}></ButtonComponent>
+                </View>
+                         
+             
           </View>
           
         </View>
 </SafeAreaView>
       </ImageBackground>
-      </PaperProvider>
     </View>
   );
 }
