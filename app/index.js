@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Text, StyleSheet, ImageBackground, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
@@ -15,6 +15,8 @@ import { Button } from 'react-native-paper';
 import { PaperProvider } from 'react-native-paper';
 import ButtonComponent from './components/ButtonComponent';
 import { Link, router } from 'expo-router';
+
+export const icons = require.context("./assets/icons", false, /\.svg$/);
 
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({

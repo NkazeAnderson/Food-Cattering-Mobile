@@ -36,11 +36,12 @@ function Login() {
         setEmail(null)
         setPassword(null)
         if (email === userData.email && password === userData.password) {
-            
-            router.push("/SignUp")
+            setSubmiting(false)
+            router.push("/main/")
         }
         else {
             setTimeout(() => {
+                 router.push("/main/")
                 setSubmiting(false)
             }, 2000)
         }

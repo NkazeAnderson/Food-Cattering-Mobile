@@ -61,6 +61,12 @@ export default typography = StyleSheet.create({
         lineHeight: 20,
         letterSpacing: 0.1
     },
+    labelMedium: {
+        fontFamily: inter600,
+        fontSize: 12,
+        lineHeight: 16,
+        letterSpacing: 0.5
+    },
     displaySmall: {
         fontFamily: inter700,
         fontSize: 36,
