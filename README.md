@@ -4,5 +4,5 @@
 Here is the link to the expo go app, Please follow the open the app on your expo go app and be kind to contact me if you find any critical errors in my code. We as developers can never be perfect but we strive to
 become better:
 # Links
-[Android:](exp://u.expo.dev/update/c6a6d615-e53b-4fb9-81b0-de71b2bb4998) : exp://u.expo.dev/update/c6a6d615-e53b-4fb9-81b0-de71b2bb4998
-[Iphone:](exp://u.expo.dev/update/15add322-07ed-4036-93db-2135dffe2ccb) : exp://u.expo.dev/update/15add322-07ed-4036-93db-2135dffe2ccb
+1. [Android:](exp://u.expo.dev/update/c6a6d615-e53b-4fb9-81b0-de71b2bb4998) : exp://u.expo.dev/update/c6a6d615-e53b-4fb9-81b0-de71b2bb4998
+2. [Iphone:](exp://u.expo.dev/update/15add322-07ed-4036-93db-2135dffe2ccb) : exp://u.expo.dev/update/15add322-07ed-4036-93db-2135dffe2ccb
