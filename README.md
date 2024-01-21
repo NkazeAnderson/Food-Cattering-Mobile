@@ -6,3 +6,5 @@ become better:
 # Links
 1. [Android:](exp://u.expo.dev/update/c6a6d615-e53b-4fb9-81b0-de71b2bb4998) : exp://u.expo.dev/update/c6a6d615-e53b-4fb9-81b0-de71b2bb4998
 2. [Iphone:](exp://u.expo.dev/update/15add322-07ed-4036-93db-2135dffe2ccb) : exp://u.expo.dev/update/15add322-07ed-4036-93db-2135dffe2ccb
+
+![Expo Android](https://github.com/NkazeAnderson/Food-Cattering-Mobile/blob/main/app/assets/expo.png)
