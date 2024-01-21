@@ -10,43 +10,78 @@ const _layout = () => {
     return (
       <>
             <Tabs screenOptions={{
-                tabBarStyle: { padding: 8 , position: "absolute", height: 74, border: 0, shadowColor: "transparent", borderRadius: 24},
-                tabBarItemStyle: {display: "none",},
-                tabBarBackground: () => (
-                    <View className="flex flex-row bg-light  absolute bottom-16 justify-around mx-10 py-2">
-                        <View >
+                tabBarStyle: {
+                    
+                    position: "absolute",
+                    borderRadius: 24,
+                    width: "100%",
+                    backgroundColor: "transparent",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    bottom: 50
+                },
+               
+                // tabBarBackground: () => (
+                //     <View className="flex flex-row bg-light  absolute bottom-16 justify-around mx-10 py-2 w-full">
+                //         <View >
                             
-                            <ButtonComponent active bg="transparent" icon={"home"} onpress={goToCatering} />
+                //             <ButtonComponent active bg="transparent" icon={"home"} onpress={goToCatering} />
                         
-                        </View>
+                //         </View>
                         
-                        <View className="rounded-full bg-primary">
+                //         <View className="rounded-full bg-primary">
 
-                        <ButtonComponent stroke='white' large icon={"catering"} />
-                        </View>
-                    <ButtonComponent bg="transparent"  icon={"person"} />
-                </View>)
+                //         <ButtonComponent stroke='white' large icon={"catering"} />
+                //         </View>
+                //     <ButtonComponent bg="transparent"  icon={"person"} />
+                // </View>)
       }}>
           
 
+          
           <Tabs.Screen
               name='index'
               options={{
-                  href: null
-              }}
+                  tabBarButton: () => (<View className=" bg-light flex flex-grow justify-center">
+                     <View className="mx-auto"><ButtonComponent icon="home" bg='light' onpress={()=>{router.push("/main/")}} /></View> 
+                  </View>),
+                  
+                    }}
+                
           />
           <Tabs.Screen
-              name='Catering'
+              name='MyMeal'
               options={{
-                  href: null
-              }}
+                  tabBarButton: () => (<View className=" bg-light flex flex-grow justify-center">
+                      <View className="mx-auto p-2 bg-primary rounded-full">
+                          <ButtonComponent icon="catering" stroke='white' onpress={()=>{router.push("/main/MyMeal")}}  />
+                      </View> 
+                  </View>),
+                  
+                    }}
+                
           />
           <Tabs.Screen
               name='Profile'
-              options={{
-                  href: null
-              }}
+                    options={{
+                  tabBarStyle: {display: "none"},
+                  tabBarButton: () => (<View className=" bg-light flex flex-grow justify-center">
+                     <View className="mx-auto"><ButtonComponent icon="person" bg='light' onpress={()=>{router.push("/main/Profile")}}  /></View> 
+                  </View>),
+                  
+                    }}
+                
           />
+          <Tabs.Screen
+              name='Catering'
+                    options={{
+                  href: null
+                  
+                    }}
+                
+          />
+         
             </Tabs>
      
           </>

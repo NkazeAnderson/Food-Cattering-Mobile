@@ -1,15 +1,14 @@
 import { View, Text, Image } from 'react-native'
 import React from 'react'
-import { Tabs} from 'expo-router'
+import { Link, Tabs} from 'expo-router'
 import ButtonComponent from '../components/ButtonComponent'
 import Input from '../components/Input'
 import typography from '../typography'
 import { FlatList, ScrollView } from 'react-native-gesture-handler'
-import food  from  "../assets/images/img_1.png"
-import food1  from  "../assets/images/img_2.png"
 import SimpleMealList from '../components/SimpleMealList'
 import MealCard from '../components/MealCard'
 import DayComponent from '../components/DayComponent'
+import Greetings from '../components/Greetings'
 const Home = () => {
     
     const days = [
@@ -35,16 +34,8 @@ const Home = () => {
           
           <ScrollView className="space-y-6 pb-28" showsVerticalScrollIndicator={false}>
             {/* Greetings and welcome text */}
-          <View className="space-y-1 pt-6 ">
-               <Text className="text-text-1" style={typography.hMedium}>
-              Good Afternoon, 
-              <Text className="text-primary">
-                  {" Rehan!"}
-              </Text>
-              </Text>
-              <Text className= " text-text-2" style={typography.bodyLarge} >
-                  Choose the right meal for you
-              </Text>
+          <View >
+               <Greetings time={"Afternoon"} userName={"Rehan!"} secondarText={"Choose the right meal for you"}/>
               </View> 
               {/* Meal search */}
               <View className=" flex justify-between flex-row space-x-2">
@@ -84,7 +75,7 @@ const Home = () => {
                   <FlatList
                           data={todayMeals}
                       renderItem={({item}) => {return (<SimpleMealList nameOf={item.name} img={item.img} active={item.active}/>)}}
-                      keyExtractor={item => (item.day)}
+                      keyExtractor={item => (item.name)}
                       ItemSeparatorComponent={()=>(<View className="w-1"/>)}
                       horizontal
                       />
@@ -96,7 +87,11 @@ const Home = () => {
                   <View className="flex flex-row justify-between">
                       
                   <Text className="text-text-1 mt-auto" style={typography.titleMedium}>Popular Meals</Text>
-                  <Text className="text-text-1 mt-auto underline" style={typography.titleSmall}>See All</Text>
+                      <Link href={"/main/Catering"} asChild>
+                      <Text className="text-text-1 mt-auto underline" style={typography.titleSmall}>
+                          See All
+                      </Text>
+                      </Link>
                   </View>
                   {/*Popular Meal List */}
                   <View className="flex flex-row space-x-1">

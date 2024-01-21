@@ -22,7 +22,7 @@ export default typography = StyleSheet.create({
         lineHeight: 32,
     },
     titleLarge: {
-        fontFamily: Inter_500Medium,
+        fontFamily: inter500,
         fontSize: 22,
         lineHeight: 28,
     },

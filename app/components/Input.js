@@ -5,7 +5,7 @@ import typography from '../typography'
 import { icons } from '../index'
 import ButtonComponent from './ButtonComponent'
 
-function Input({ lable, placeholder, value="", onchange, rightIcon, leftIcon, bg = "light-bg"}) {
+function Input({ lable, placeholder, value="", onchange = ()=>{console.log("Typing")}, rightIcon, leftIcon, bg = "light-bg"}) {
     const placeHolderTypo = typography.bodyMedium;
   return (
    <View>
