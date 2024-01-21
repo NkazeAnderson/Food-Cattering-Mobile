@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Food-Cattering-Mobile",
-    "slug": "Food-Cattering-Mobile",
+    "slug": "food-catering-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -22,13 +22,29 @@
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.walexxx23.foodcateringapp"
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f2259def-571a-4337-a11e-4c877e40da9a"
+      }
+    },
+    "owner": "walexxx23",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f2259def-571a-4337-a11e-4c877e40da9a"
+    }
   }
 }
